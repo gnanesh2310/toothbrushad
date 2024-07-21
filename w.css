@@ -52,7 +52,7 @@ header .container {
   text-align: center; /* Center align text */
   text-transform: uppercase; /* Uppercase text */
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-  padding: 10px; /* Adjust padding */
+  padding: 20px;
   border-radius: 10px; /* Rounded corners */
   width: 80%; /* Adjust width */
   max-width: 600px; /* Limit width for larger screens */
@@ -149,10 +149,11 @@ footer .container {
 /* Responsive Design */
 @media (max-width: 768px) {
   .btext {
-    font-size: 1em; /* Adjust font size for smaller screens */
-    padding: 10px; /* Adjust padding */
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 15px; /* Adjust padding */
     width: 90%; /* Adjust width */
     max-width: none; /* Remove max-width restriction */
+    white-space: normal; /* Ensure text wraps */
   }
 
   .price {
@@ -160,11 +161,27 @@ footer .container {
   }
 
   .paragraph {
-    padding: 30px 20px; /* Reduce padding */
+    padding: 30px 20px; /* Reduce padding for smaller screens */
   }
 
   input, button {
     width: 100%; /* Full width on mobile */
     max-width: none; /* Remove max-width restriction */
+  }
+}
+
+@media (max-width: 480px) {
+  .btext {
+    font-size: 1em; /* Further reduce font size for very small screens */
+    padding: 10px; /* Adjust padding for very small screens */
+    width: 90%; /* Adjust width */
+  }
+
+  .price {
+    font-size: 1.2em; /* Further reduce font size */
+  }
+
+  .paragraph {
+    padding: 20px 10px; /* Further reduce padding */
   }
 }
