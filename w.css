@@ -30,18 +30,21 @@ header .container {
   background-image: url('4th.jpg'); /* Updated to the new image */
   min-height: 300px; /* Adjust height as needed */
   height: 50vh; /* Use viewport height for better responsiveness */
+  background-position: center; /* Center the image */
 }
 
 .bimg2 {
   background-image: url('2nd.jpg'); /* Path to the second image */
   min-height: 400px; /* Adjust height as needed */
   height: 50vh; /* Use viewport height for better responsiveness */
+  background-position: center;
 }
 
 .bimg3 {
   background-image: url('3rd.jpg'); /* Path to the third image */
   min-height: 400px; /* Adjust height as needed */
   height: 50vh; /* Use viewport height for better responsiveness */
+  background-position: center;
 }
 
 .btext {
