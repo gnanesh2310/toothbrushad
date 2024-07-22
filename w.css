@@ -7,11 +7,12 @@ body {
 }
 
 header {
-  background: #e91e63; /* Vibrant pink color */
+  background: #e91e63;
   color: white;
   padding: 40px 20px;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
+  animation: fadeInDown 2s ease-out;
 }
 
 header .container {
@@ -27,43 +28,48 @@ header .container {
 }
 
 .bimg1 {
-  background-image: url('4th.jpg'); /* Updated to the new image */
-  min-height: 300px; /* Adjust height as needed */
-  height: 50vh; /* Use viewport height for better responsiveness */
-  background-position: center; /* Center the image */
+  background-image: url('4th.jpg');
+  min-height: 300px;
+  height: 50vh;
+  background-position: center;
+  animation: slideIn 2s ease-in-out;
 }
 
 .bimg2 {
-  background-image: url('2nd.jpg'); /* Path to the second image */
-  min-height: 400px; /* Adjust height as needed */
-  height: 50vh; /* Use viewport height for better responsiveness */
+  background-image: url('2nd.jpg');
+  min-height: 400px;
+  height: 50vh;
   background-position: center;
+  animation: slideIn 2s ease-in-out 1s;
 }
 
 .bimg3 {
-  background-image: url('3rd.jpg'); /* Path to the third image */
-  min-height: 400px; /* Adjust height as needed */
-  height: 50vh; /* Use viewport height for better responsiveness */
+  background-image: url('3rd.jpg');
+  min-height: 400px;
+  height: 50vh;
   background-position: center;
+  animation: slideIn 2s ease-in-out 2s;
 }
 
 .btext {
   position: absolute;
-  top: 50%; /* Center vertically */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center horizontally */
-  color: white; /* Text color for good contrast */
-  font-size: 1.5em; /* Adjust size as needed */
-  letter-spacing: 2px; /* Spacing between letters */
-  text-align: center; /* Center align text */
-  text-transform: uppercase; /* Uppercase text */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  width: 80%; /* Adjust width */
-  max-width: 600px; /* Limit width for larger screens */
-  white-space: normal; /* Allow text wrapping */
-  overflow: hidden; /* Hide overflow text */
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  white-space: normal;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .headline {
@@ -71,6 +77,7 @@ header .container {
   color: #fff;
   padding: 15px 30px;
   border-radius: 10px;
+  animation: slideInUp 1s ease-out forwards;
 }
 
 .paragraph {
@@ -95,12 +102,17 @@ ul {
 
 li {
   padding: 10px 0;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .price {
   font-size: 2em;
-  color: #e91e63; /* Vibrant pink color */
+  color: #e91e63;
   font-weight: bold;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 form {
@@ -121,17 +133,23 @@ input {
   border-radius: 5px;
   width: 80%;
   max-width: 400px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
 }
 
 button {
   padding: 15px;
-  background-color: #e91e63; /* Vibrant pink color */
+  background-color: #e91e63;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 2s;
 }
 
 button:hover {
@@ -155,47 +173,102 @@ footer .container {
 /* Responsive Design */
 @media (max-width: 768px) {
   .btext {
-    font-size: 1.2em; /* Adjust font size for smaller screens */
-    padding: 15px; /* Adjust padding */
-    width: 90%; /* Adjust width */
-    max-width: none; /* Remove max-width restriction */
-    white-space: normal; /* Ensure text wraps */
+    font-size: 1.2em;
+    padding: 15px;
+    width: 90%;
+    max-width: none;
+    white-space: normal;
   }
 
   .price {
-    font-size: 1.5em; /* Adjust font size */
+    font-size: 1.5em;
   }
 
   .paragraph {
-    padding: 30px 20px; /* Reduce padding for smaller screens */
+    padding: 30px 20px;
   }
 
   input, button {
-    width: 100%; /* Full width on mobile */
-    max-width: none; /* Remove max-width restriction */
+    width: 100%;
+    max-width: none;
   }
 
   .bimg1, .bimg2, .bimg3 {
-    height: 40vh; /* Adjust height for smaller screens */
+    height: 60vh; /* Increase height for better visibility */
+    background-attachment: scroll; /* Change attachment to scroll for better mobile experience */
   }
 }
 
 @media (max-width: 480px) {
   .btext {
-    font-size: 1em; /* Further reduce font size for very small screens */
-    padding: 10px; /* Adjust padding for very small screens */
-    width: 90%; /* Adjust width */
+    font-size: 1em;
+    padding: 10px;
+    width: 90%;
   }
 
   .price {
-    font-size: 1.2em; /* Further reduce font size */
+    font-size: 1.2em;
   }
 
   .paragraph {
-    padding: 20px 10px; /* Further reduce padding */
+    padding: 20px 10px;
   }
 
   .bimg1, .bimg2, .bimg3 {
-    height: 35vh; /* Further adjust height for very small screens */
+    height: 50vh; /* Adjust height for very small screens */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
