@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -194,8 +195,7 @@ footer .container {
   }
 
   .bimg1, .bimg2, .bimg3 {
-    height: 60vh; /* Increase height for better visibility */
-    background-attachment: scroll; /* Change attachment to scroll for better mobile experience */
+    height: 40vh;
   }
 }
 
@@ -215,7 +215,7 @@ footer .container {
   }
 
   .bimg1, .bimg2, .bimg3 {
-    height: 50vh; /* Adjust height for very small screens */
+    height: 35vh;
   }
 }
 
